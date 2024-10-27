@@ -27,6 +27,8 @@ class UserController extends Controller
                 ->rawColumns(['profile_picture'])
                 ->make(true);
         }
+        $roles = Role::all();
+        return view('welcome', compact('roles'));
     }
 
 

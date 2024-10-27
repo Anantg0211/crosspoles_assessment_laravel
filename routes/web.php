@@ -1,7 +1,6 @@
 <?php
 
 use App\Http\Controllers\Users\UserController;
-use App\Models\Role;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,8 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $roles = Role::all();
-    return view('welcome', compact('roles'));
+    return redirect(route('users.index'));
 });
 
 
